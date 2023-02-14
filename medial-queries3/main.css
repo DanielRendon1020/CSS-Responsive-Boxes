@@ -1,3 +1,55 @@
 body {
   background: peachpuff;
 }
+
+*:not(body, html, .container, .cont2, .cont3, .cont4) {
+  border: 2px solid black;
+  border-radius: .5rem;
+  background-color: lightgray;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.a {
+  flex-grow: 1;
+}
+
+.b, .c, .d, .e, .f, .g {
+  width: 30%;
+  flex-grow: 1;
+}
+
+.cont2 {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 2;
+  column-gap: 1rem;
+}
+
+.h {
+  flex-grow: 3;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-flow: row wrap;
+  }
+  .a {
+    width: 100%;
+  }
+  .cont2 {
+    min-width: 70%;
+    margin: 0;
+  }
+  .h {
+    margin: 0 0 0 1rem;
+  }
+}
