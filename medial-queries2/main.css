@@ -1,3 +1,64 @@
 body {
   background: papayawhip;
 }
+
+*:not(body, html, .container, .trio) {
+  border: 2px solid black;
+  border-radius: .5rem;
+  background-color: lightgray;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.container:not(.trio) {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.a {
+  flex-grow: 1;
+}
+
+.b {
+  flex-grow: 3;
+}
+
+.trio {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  column-gap: 1rem;
+}
+
+.b, .trio {
+  min-height: 20vh;
+}
+
+.c, .d, .e {
+  flex-grow: 1;
+}
+
+
+.f {
+  flex-grow: 1;
+}
+
+
+@media (min-width: 600px) {
+  .container {
+    flex-flow: row wrap;
+  }
+  .a {
+    width: 100%;
+  }
+  .b, .trio {
+    max-width: 70%;
+  }
+  .f {
+    margin: 0 0 0 1rem;
+  }
+}
